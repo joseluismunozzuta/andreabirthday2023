@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { IconButton } from "@material-tailwind/react";
 import { useAppContext } from '../context/AppContext';
-import { animateScroll as scroll } from 'react-scroll';
 
 const Generator = () => {
 
