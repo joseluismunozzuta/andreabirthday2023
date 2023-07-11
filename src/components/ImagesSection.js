@@ -2,8 +2,12 @@ import React from "react";
 import TextAccordion from "./TextAccordion";
 import { IconButton } from "@material-tailwind/react";
 import { Link } from 'react-scroll';
+import { useAppContext } from '../context/AppContext';
 
-const ImagesSection = ({ imageUrlsArr }) => {
+const ImagesSection = () => {
+
+    const {imageUrls} = useAppContext();
+    
     return (
         <>
             <div className="h-screen overflow-auto flex items-center flex-col justify-center relative">
@@ -14,7 +18,7 @@ const ImagesSection = ({ imageUrlsArr }) => {
 
                 <div className="flex flex-col justify-center my-3 py-3 items-center">
                     <div className="w-auto carousel carousel-vertical rounded-box mx-auto border border-black" style={{ height: "27rem" }}>
-                        {imageUrlsArr.map((url, index) => (
+                        {imageUrls.map((url, index) => (
                             <div className="carousel-item h-full justify-center">
                                 <img src={url} alt={`i${index}`} />
                             </div>
