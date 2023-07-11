@@ -3,7 +3,7 @@ import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/re
 import React from 'react'
 
 const TextAccordion = () => {
-    const [open, setOpen] = useState(1);
+    const [open, setOpen] = useState(0);
 
     const handleOpen = (value) => {
         setOpen(open === value ? 0 : value);

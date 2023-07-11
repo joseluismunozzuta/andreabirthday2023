@@ -17,6 +17,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.genbg{
+  background-image: url('/public/back2.jpg');
+}
+
 .wallpaper {
   background-image: url('/public/happybirthday.webp');
 }

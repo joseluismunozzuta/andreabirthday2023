@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import ImagesSection from './components/ImagesSection';
 import Header from './components/Header';
+import { Link, Element, Events, animateScroll as scroll } from 'react-scroll';
+import { useEffect } from 'react';
+import Generator from './components/Generator';
 
 function App() {
 
@@ -97,10 +100,28 @@ function App() {
     'https://firebasestorage.googleapis.com/v0/b/photoswithandre.appspot.com/o/IMG_9100-min.gif?alt=media&token=8840fea0-2f2f-4457-a9d4-d576e576a66f'
   ];
 
+  useEffect(() => {
+    Events.scrollEvent.register('begin');
+    Events.scrollEvent.register('end');
+
+    // Clean up the scroll event listeners
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
   return (
     <>
-      <Header></Header>
-      <ImagesSection imageUrlsArr={imageUrls}></ImagesSection>
+      <Element name="component1" className="element">
+        <Header></Header>
+      </Element>
+      <Element name="component2" className="element">
+        <ImagesSection imageUrlsArr={imageUrls}></ImagesSection>
+      </Element>
+      <Element name="component3" className="element">
+        <Generator></Generator>
+      </Element>
     </>
 
   );
