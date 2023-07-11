@@ -1,7 +1,7 @@
 import './App.css';
 import ImagesSection from './components/ImagesSection';
 import Header from './components/Header';
-import {Element, Events, animateScroll as scroll } from 'react-scroll';
+import {Element, Events } from 'react-scroll';
 import { useEffect } from 'react';
 import Generator from './components/Generator';
 import AppContextProvider from './context/AppContext';
@@ -19,12 +19,6 @@ function App() {
       Events.scrollEvent.remove('end');
     };
   }, []);
-
-
-  const scrollToTarjeta = () => {
-    scroll.scrollTo("component4");
-  };
-
 
   return (
     <>
