@@ -18,7 +18,7 @@ const Generator = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Existen tantas...</h1>
                     <p className="mb-5">maneras de desearte un feliz cum, así que creé la forma de hacer muchos distintos mensajes para tú.</p>
-                    <Link to="component4" className="btn btn-primary" onClick={() => generateTarjeta()}>Genera mi tarjetita</Link>
+                    <Link to="component4" smooth={true} duration={500} className="btn btn-primary" onClick={() => generateTarjeta()}>Genera mi tarjetita</Link>
                 </div>
             </div>
 
