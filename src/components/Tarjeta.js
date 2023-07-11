@@ -25,7 +25,7 @@ const Tarjeta = () => {
             <img className="mask mask-squircle w-2/5 h-48 mx-1 float-left" src={img1} alt='' />
             <h1 className='text-3xl px-2'>{feliz}, {names}!</h1>
             <h1 className='text-2xl text-light-blue-900 pt-6 px-2'>Te mereces lo mejor del mundo hoy y siempre por {reasons}!</h1>
-            <img className="mask mask-squircle w-2/5 h-fit mx-1 float-right" src={img2} alt='' />
+            <img className="mask mask-squircle w-2/5 h-48 mx-1 float-right" src={img2} alt='' />
             <h1 className='text-2xl text-indigo-900 pt-10 ml-10 text-left px-2'>Dios te cuide siempre, {names2}, gracias por {reasons2}!</h1>
             <h1 className='text-3xl pt-6 text-center px-2 text-black'>Te amo con mi vida, {names3} ❤️!</h1>
 
